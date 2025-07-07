@@ -9,6 +9,7 @@
   --gray: #636363;
   --off_white: #fafaf7;
   --green: #cfff5c;
+  --accent: blue;
 }
 
 h1,
@@ -28,7 +29,6 @@ h1 {
 h3 {
   font-size: 20px;
 }
-
 a {
   text-decoration: none;
   color: inherit;
@@ -36,7 +36,6 @@ a {
     text-decoration: underline;
   }
 }
-
 html,
 body {
   width: 100%;

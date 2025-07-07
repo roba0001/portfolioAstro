@@ -51,12 +51,12 @@ import Gradient from "../components/Gradient.astro";
         <h3>Education</h3>
         <div class="education_info_txt">
           <p>
-            AP Degree in <span class="bold_span">Multimedia Design</span> at Copenhagen School of Design
-            and Technology (2023 - 2025)
+            AP Degree in <span class="bold_span color">Multimedia Design</span> at Copenhagen School
+            of Design and Technology (2023 - 2025)
           </p>
           <p>
-            BA Degree in <span class="bold_span">Web Development</span> at Copenhagen School of Design
-            and Technology (2025 - 2026)
+            BA Degree in <span class="bold_span color">Web Development</span> at Copenhagen School of
+            Design and Technology (2025 - 2026)
           </p>
         </div>
       </div>
@@ -90,6 +90,59 @@ import Gradient from "../components/Gradient.astro";
           commodi nostrum ut adipisci quos unde aut exercitationem tempora? Sint maiores, iste
           expedita ad ipsum maxime!
         </p>
+        <a class="link_btn" href="https://visual-impact-2.netlify.app/">Visit Visual Impact!</a>
+      </div>
+    </div>
+
+    <div class="project_wrapper">
+      <div class="project_text_wrapper">
+        <h3>Alpha Management</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam enim perferendis quam at
+          recusandae excepturi incidunt officiis ratione porro alias totam, praesentium facilis
+          delectus soluta? Voluptatem aliquid quis vel cupiditate amet reiciendis tempore. Magni,
+          commodi nostrum ut adipisci quos unde aut exercitationem tempora? Sint maiores, iste
+          expedita ad ipsum maxime!
+        </p>
+      </div>
+    </div>
+
+    <div class="project_wrapper">
+      <div class="project_text_wrapper">
+        <h3>Veranda Vin</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam enim perferendis quam at
+          recusandae excepturi incidunt officiis ratione porro alias totam, praesentium facilis
+          delectus soluta? Voluptatem aliquid quis vel cupiditate amet reiciendis tempore. Magni,
+          commodi nostrum ut adipisci quos unde aut exercitationem tempora? Sint maiores, iste
+          expedita ad ipsum maxime!
+        </p>
+      </div>
+    </div>
+
+    <div class="project_wrapper">
+      <div class="project_text_wrapper">
+        <h3>Soup Shenanigans</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam enim perferendis quam at
+          recusandae excepturi incidunt officiis ratione porro alias totam, praesentium facilis
+          delectus soluta? Voluptatem aliquid quis vel cupiditate amet reiciendis tempore. Magni,
+          commodi nostrum ut adipisci quos unde aut exercitationem tempora? Sint maiores, iste
+          expedita ad ipsum maxime!
+        </p>
+      </div>
+    </div>
+
+    <div class="project_wrapper">
+      <div class="project_text_wrapper">
+        <h3>Internship with Supersonic</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam enim perferendis quam at
+          recusandae excepturi incidunt officiis ratione porro alias totam, praesentium facilis
+          delectus soluta? Voluptatem aliquid quis vel cupiditate amet reiciendis tempore. Magni,
+          commodi nostrum ut adipisci quos unde aut exercitationem tempora? Sint maiores, iste
+          expedita ad ipsum maxime!
+        </p>
       </div>
     </div>
   </section>
@@ -101,12 +154,8 @@ import Gradient from "../components/Gradient.astro";
     width: 60%;
   }
 
-  /* h1 {
-    margin-bottom: 2rem;
-  } */
-
   .name_span {
-    color: blue;
+    color: var(--accent);
     font-weight: bold;
     font-size: 200px;
     width: 100%;
@@ -123,9 +172,6 @@ import Gradient from "../components/Gradient.astro";
     gap: 6rem;
     img {
       height: 50%;
-      /* position: relative;
-      right: 40%;
-      bottom: -10%; */
     }
 
     .about_info_wrapper {
@@ -164,20 +210,10 @@ import Gradient from "../components/Gradient.astro";
     }
   }
 
-  /* .education_wrapper,
-  .skills_wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    > * {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-  } */
-
   .project_wrapper {
     display: flex;
+    height: 90vh;
+    scroll-snap-type: y mandatory;
   }
   .project_text_wrapper {
     position: absolute;
@@ -186,5 +222,22 @@ import Gradient from "../components/Gradient.astro";
   .flex {
     display: flex;
     gap: 2.5rem;
+  }
+
+  .link_btn {
+    padding: 0.25rem 0.5rem;
+    border-radius: 30px;
+    border-color: black;
+    border-style: solid;
+    color: black;
+  }
+  .link_btn:hover {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+  }
+
+  .color {
+    color: var(--accent);
   }
 </style>
