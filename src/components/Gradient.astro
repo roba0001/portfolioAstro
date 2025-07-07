@@ -1,0 +1,27 @@
+---
+const { gradient_class } = Astro.props;
+---
+
+<div id="gradient" class={gradient_class}></div>
+
+<style>
+  /*MANUAL TIL BRUG PÅ SIDE*/
+  /*Opret en ny klasse og tilføj følgende:*/
+  /*STØRRELSE: definer width og height*/
+  /*POSITION: definer postion med bottom og right*/
+  /*Tilføj samme klasse til gradient i din fil*/
+  #gradient {
+    flex-shrink: 0;
+    border-radius: 1263px;
+    z-index: -1;
+    background: radial-gradient(50.06% 50% at 50.06% 50%, var(--green) 0%, var(--off_white) 100%);
+  }
+
+  .visual_impact_left {
+    width: 850px;
+    height: 900px;
+    z-index: -1;
+    position: relative;
+    left: -27rem;
+  }
+</style>

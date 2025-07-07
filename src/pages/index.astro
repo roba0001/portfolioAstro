@@ -1,11 +1,190 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Gradient from "../components/Gradient.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <section class="hero">
+    <p>Hi, my name is</p>
+    <p class="name_span">RONJA</p><p>and I am a Multimediadesigner</p>
+  </section>
+  <section id="about">
+    <div class="about_info_wrapper">
+      <h1>About</h1>
+      <div class="about_info_txt">
+        <div class="who">
+          <h3>Who am I?</h3>
+          <p>
+            My name is Ronja Baldursdóttir, an AP graduate in Multimediadesign, and a current
+            student of Webdevelopment at the Copenhagen School of Design and Technology.
+          </p>
+        </div>
+        <div class="what">
+          <h3>What do I offer?</h3>
+          <p>
+            With a background in front-end development and design, I bring both creativity and
+            technical expertise to the table. I enjoy collaborative environments, getting
+            inspiration from teammates while continuously refining my work through feedback.
+          </p>
+        </div>
+        <div class="goals">
+          <h3>What are my goals?</h3>
+          <p>
+            I’m eager to join a dynamic team where I can continue growing my skills and developing
+            as a multimediadesigner. My goal is to further evolve both individually and in a group
+            setting, while gaining real-world insight into the industry.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- hover viser at der onclik ændres til ægte img af mig -->
+    <img src="/public/imgs/guy.png" alt="Guy" />
+  </section>
+
+  <section id="experience">
+    <h1>Experience</h1>
+    <div class="experience_info_wrapper">
+      <div class="education_info_wrapper">
+        <h3>Education</h3>
+        <div class="education_info_txt">
+          <p>
+            AP Degree in <span class="bold_span">Multimedia Design</span> at Copenhagen School of Design
+            and Technology (2023 - 2025)
+          </p>
+          <p>
+            BA Degree in <span class="bold_span">Web Development</span> at Copenhagen School of Design
+            and Technology (2025 - 2026)
+          </p>
+        </div>
+      </div>
+      <div class="skills_info_wrapper">
+        <h3>Skills</h3>
+        <div class="skills_info_txt">
+          <p>
+            <span class="bold_span">Design: </span>
+            UX design, Design Systems, Prototyping, User & Design Research
+          </p>
+          <p>
+            <span class="bold_span">Tools & Languages: </span>
+            HTML, CSS, JS, Astro, Next.js, Wordpress, Github, Figma, Illustrator, Photoshop, Premiere
+            Pro, After Effects, Elementor
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h1>Projects</h1>
+    <div class="project_wrapper">
+      <Gradient gradient_class="visual_impact_left" />
+      <div class="project_text_wrapper">
+        <h3>Visual Impact</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam enim perferendis quam at
+          recusandae excepturi incidunt officiis ratione porro alias totam, praesentium facilis
+          delectus soluta? Voluptatem aliquid quis vel cupiditate amet reiciendis tempore. Magni,
+          commodi nostrum ut adipisci quos unde aut exercitationem tempora? Sint maiores, iste
+          expedita ad ipsum maxime!
+        </p>
+      </div>
+    </div>
+  </section>
 </Layout>
+
+<style>
+  section {
+    height: 90vh;
+    width: 60%;
+  }
+
+  /* h1 {
+    margin-bottom: 2rem;
+  } */
+
+  .name_span {
+    color: blue;
+    font-weight: bold;
+    font-size: 200px;
+    width: 100%;
+    height: auto;
+  }
+
+  .bold_span {
+    font-weight: 700;
+  }
+
+  #about {
+    width: 80%;
+    display: flex;
+    gap: 6rem;
+    img {
+      height: 50%;
+      /* position: relative;
+      right: 40%;
+      bottom: -10%; */
+    }
+
+    .about_info_wrapper {
+      gap: 1.5rem;
+    }
+    .about_info_txt {
+      gap: 2.5rem;
+      > * {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+
+    .about_info_txt,
+    .about_info_wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  #experience {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .experience_info_wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+
+      > * {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  }
+
+  /* .education_wrapper,
+  .skills_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    > * {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  } */
+
+  .project_wrapper {
+    display: flex;
+  }
+  .project_text_wrapper {
+    position: absolute;
+    width: 80%;
+  }
+  .flex {
+    display: flex;
+    gap: 2.5rem;
+  }
+</style>
