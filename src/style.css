@@ -22,6 +22,9 @@ a {
   line-height: 200%;
 }
 
+a {
+  font-size: 14 px;
+}
 h1 {
   font-size: 40px;
 }
