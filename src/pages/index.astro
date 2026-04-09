@@ -10,6 +10,10 @@ import Gradient from "../components/Gradient.astro";
   <section class="hero">
     <p>Hi, my name is</p>
     <p class="name_span">RONJA</p><p>and I am a Multimediadesigner</p>
+    <img class="star star1 hidden" src="../../public/imgs/star.png" alt="Star 1">
+    <img class="star star2 hidden" src="../../public/imgs/star.png" alt="Star 2">
+    <img class="star star3 hidden" src="../../public/imgs/star.png" alt="Star 3">
+    <img class="star star4 hidden" src="../../public/imgs/star.png" alt="Star 4">
   </section>
   <section id="about">
     <div class="about_info_wrapper">
@@ -40,8 +44,9 @@ import Gradient from "../components/Gradient.astro";
         </div>
       </div>
     </div>
-    <!-- hover viser at der onclik ændres til ægte img af mig -->
-    <img src="/public/imgs/guy.png" alt="Guy" />
+    <img class="hatGuy" src="/public/imgs/guy.png" alt="Guy" />
+    <!-- <img class="hatGuy" src="/public/imgs/hatGuy.png" alt="Guy" /> -->
+    <!-- <img class="nakedGuy" class="hidden" src="/public/imgs/nakedGuy.png" alt="Guy" /> -->
   </section>
 
   <section id="experience">
@@ -68,9 +73,12 @@ import Gradient from "../components/Gradient.astro";
             UX design, Design Systems, Prototyping, User & Design Research
           </p>
           <p>
-            <span class="bold_span">Tools & Languages: </span>
-            HTML, CSS, JS, Astro, Next.js, Wordpress, Github, Figma, Illustrator, Photoshop, Premiere
-            Pro, After Effects, Elementor
+            <span class="bold_span">Languages & Frameworks: </span>
+            HTML, CSS, JS, Astro, Next.js, Python, PHP
+          <p>
+            <span class="bold_span">Software: </span>
+            Git, Wordpress, Elementor, Figma, Illustrator, Photoshop, Premiere
+            Pro, After Effects
           </p>
         </div>
       </div>
@@ -190,7 +198,57 @@ import Gradient from "../components/Gradient.astro";
   </section>
 </Layout>
 
+<script>
+  const name = document.querySelector(".name_span");
+  name.addEventListener("mouseenter", () => {
+    document.querySelectorAll(".star").forEach(star => {
+      star.classList.remove("hidden");
+    });
+  });
+  name.addEventListener("mouseleave", () => {
+    document.querySelectorAll(".star").forEach(star => {
+      star.classList.add("hidden");
+    });
+  });
+  const hatGuy = document.querySelector(".hatGuy");
+  const nakedGuy = document.querySelector(".nakedGuy");
+    hatGuy.addEventListener("click", ()=>{
+      hatGuy.classList.add("hidden");
+      nakedGuy.classList.remove("hidden");
+    });
+    nakedGuy.addEventListener("click", ()=>{
+      hatGuy.classList.remove("hidden");
+      nakedGuy.classList.add("hidden");
+    });
+</script>
+
 <style>
+
+  .hero {
+    .star {
+      position: absolute;
+    }
+    .star1 {
+      top: 2.5rem;
+      left: 10rem;
+      width: 15rem;
+    }
+    .star2 {
+      bottom: 5rem;
+      right: 10px;
+      width: 10rem;
+    }
+    .star3 {
+      right: 10rem;
+      bottom: 100px;
+      width: 25rem;
+    }
+    .star4 {
+      right: 10rem;
+      top: 100px;
+      width: 7.5rem;
+    }
+  }
   section {
     height: 100vh;
     width: 60%;
