@@ -1,0 +1,61 @@
+---
+const { title, description, role, tech, link, slug } = Astro.props;
+---
+
+<div class={`project ${slug}`}>
+    <div class="text_container">
+        <h3>{title}</h3>
+
+        <p>{description}</p>
+
+        <p>
+            <strong>Role:</strong>
+            {role.join(", ")}
+        </p>
+
+        <p>
+            <strong>Tech:</strong>
+            {tech.join(", ")}
+        </p>
+
+        {link && (
+            <a href={link} target="_blank" class="link_btn">
+            View Project
+            </a>
+        )}
+    </div>
+    <div class="img_container">
+        <img src=`/public/imgs/projects/${slug}.png` alt="">
+    </div>
+</div>
+
+<style>
+    .project {
+        display: flex;
+        flex-direction: column;
+        height: max-content;
+        gap: 0.5rem;
+        /* background-color: rgb(241, 241, 243); */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        border-radius: 1rem;
+        /* margin-bottom: 5rem;  */
+        padding: 1.5rem;  
+        
+        .text_container {
+            
+        }
+        .img_container {
+            .img2 {
+                width: 70%;
+                position: relative;
+                left: 7rem;
+                bottom: 4rem;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+        
+    }
+</style>

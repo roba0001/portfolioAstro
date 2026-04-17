@@ -49,7 +49,7 @@ body {
 body,
 html,
 .page {
-  overflow: visible !important;
+  overflow: scroll;
 }
 
 .hidden {

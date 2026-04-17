@@ -21,25 +21,15 @@ import Header from "../components/Header.astro";
   </head>
   <body>
     <Header />
-    <div class="page">
+    
       <slot />
-    </div>
+    
   </body>
   <!-- insert footer -->
 </html>
 
 <style>
-  .page {
-    margin: 7rem 4rem;
-    /* display: grid;
-    grid-template-columns: 1fr min(1000px, 100%) 1fr;
+  
 
-    > * {
-      grid-column: 2;
-    } */
-  }
-
-  /* .fullwidth {
-    grid-column: 1/-1;
-  } */
+  
 </style>
