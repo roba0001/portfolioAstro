@@ -42,14 +42,13 @@ a {
 html,
 body {
   width: 100%;
-  height: 100%;
   background-color: var(--off_white);
 }
 
 body,
 html,
 .page {
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 .hidden {

@@ -12,7 +12,7 @@ const orderedProjects = [...projects].sort((a, b) => a.order - b.order);
   <div class="page">
     <section class="hero">
       <p>Hi, my name is</p>
-      <p class="name_span">RONJA</p><p>and I am a multimediadesigner currently studying Web Development</p>
+      <p class="heroName">RONJA</p><p>and I am a multimediadesigner currently studying Web Development</p>
       <img class="star star1 hidden" src="../../public/imgs/star.png" alt="Star 1">
       <img class="star star2 hidden" src="../../public/imgs/star.png" alt="Star 2">
       <img class="star star3 hidden" src="../../public/imgs/star.png" alt="Star 3">
@@ -48,8 +48,8 @@ const orderedProjects = [...projects].sort((a, b) => a.order - b.order);
         </div>
       </div>
       <!-- <img class="hatGuy" src="/public/imgs/guy.png" alt="Guy" /> -->
-      <img class="hatGuy" src="/public/imgs/hatGuy.png" alt="Guy" />
-      <img class="nakedGuy" class="hidden" src="/public/imgs/nakedGuy.png" alt="Guy" />
+      <!-- <img class="hatGuy" src="/public/imgs/hatGuy.png" alt="Guy" /> -->
+      <!-- <img class="nakedGuy" class="hidden" src="/public/imgs/nakedGuy.png" alt="Guy" /> -->
     </section>
 
     <section id="experience">
@@ -102,17 +102,17 @@ const orderedProjects = [...projects].sort((a, b) => a.order - b.order);
 </Layout>
 
 <script>
-  const name = document.querySelector(".name_span");
-  name.addEventListener("mouseenter", () => {
-    document.querySelectorAll(".star").forEach(star => {
-      star.classList.remove("hidden");
-    });
-  });
-  name.addEventListener("mouseleave", () => {
-    document.querySelectorAll(".star").forEach(star => {
-      star.classList.add("hidden");
-    });
-  });
+  
+//   document.addEventListener("DOMContentLoaded", () => {
+//     const heroName = document.querySelector(".heroName");
+//   console.log(heroName); // does this log the element or null?
+
+//   window.addEventListener("scroll", () => {
+//   console.log("scrolling"); // does this fire?
+//   heroName.textContent = "test";
+// });
+//   });
+
   const hatGuy = document.querySelector(".hatGuy");
   const nakedGuy = document.querySelector(".nakedGuy");
     hatGuy.addEventListener("click", ()=>{
@@ -126,8 +126,12 @@ const orderedProjects = [...projects].sort((a, b) => a.order - b.order);
 </script>
 
 <style>
-  .page, #projects {
-      margin: 7rem 4rem;
+  .page {
+      margin: 7rem 4rem 0rem 4rem;
+      
+    }
+   #projects {
+      margin: 0rem 4rem 7rem 4rem;
       
     }
 
@@ -166,7 +170,7 @@ const orderedProjects = [...projects].sort((a, b) => a.order - b.order);
     /* width: 60%; */
   }
 
-  .name_span {
+  .heroName {
     color: var(--accent);
     font-weight: bold;
     font-size: 200px;
@@ -191,6 +195,7 @@ const orderedProjects = [...projects].sort((a, b) => a.order - b.order);
     }
     .about_info_txt {
       gap: 2.5rem;
+      width: 75%;
       > * {
         display: flex;
         flex-direction: column;
