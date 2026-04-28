@@ -23,7 +23,7 @@
         "slug": "colliderscope-collective",
         "description": "Built a full content management system for a music collective, including a custom admin interface for managing artists and content. Implemented CRUD functionality connected to a database, enabling dynamic updates to the public-facing website. Currently still in development.",
         "role": ["UX/UI Design","Fullstack Development"],
-        "tech": ["Python", "Flask", "Jinja", "SQL", "MariaDB"],
+        "tech": ["Python", "SQL", "MariaDB"],
         "link": "",
         "order": 2
     },
